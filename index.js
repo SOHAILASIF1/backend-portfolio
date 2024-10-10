@@ -11,6 +11,7 @@ import { dirname } from 'path';
 dotenv.config();
 
 const app = Express();
+const Port=process.env.PORT || 7000
 
 // Fix __dirname for ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -34,6 +35,6 @@ app.get("*", (req, res) => {
 });
 
 
-app.listen(7000, () => {
+app.listen(Port, () => {
     console.log("App is running on port 7000");
 });
