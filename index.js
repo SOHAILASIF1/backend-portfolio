@@ -17,7 +17,11 @@ const PORT = process.env.PORT || 7000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-app.use(cors());
+app.use(cors({
+    origin: "*", // Replace '*' with your frontend URL in production
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true // Allow credentials
+  }));
 DBConnection();
 app.use(urlencoded({ extended: true }));
 app.use(Express.json());
