@@ -23,14 +23,14 @@ app.use(urlencoded({ extended: true }));
 app.use(Express.json());
 
 // Serve static files from the "dist" folder
-app.use(Express.static(path.join(__dirname, "./frontend/dist")));
+app.use(Express.static(path.join(__dirname, "frontend/dist")));
 
 app.use('/api', getDataRoutes);
 app.use('/api/contact', contactRoute);
 
 // Fallback route for SPA
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./frontend/dist", "index.html"));
+    res.sendFile(path.resolve(__dirname, "frontend/dist", "index.html"));
 });
 
 app.listen(PORT, () => {
