@@ -37,6 +37,4 @@ app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./frontend/dist", "index.html"));
 });
 
-app.listen(PORT, () => {
-    console.log(`App is running on port ${PORT}`);
-});
+
