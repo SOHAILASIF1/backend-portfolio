@@ -19,7 +19,7 @@
       "dest": "/index.js"
     },
     {
-      "src": "/api/contact/send",  // Contact route for sending emails
+      "src": "/api/contact/send",
       "dest": "/index.js"
     },
     {
