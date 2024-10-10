@@ -1,14 +1,31 @@
 {
     "builds": [
-    {
-    "src": "./index.js",
-    "use": "@vercel/node"
-    }
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
     ],
     "routes": [
-    {
-    "src": "/.*",
-    "dest": "index.js"
-    }
+      {
+        "src": "/api/getData",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/api/addProject",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/api/deletePost/(.*)",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/api/contact/send",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
     ]
-    }
+  }
+  
