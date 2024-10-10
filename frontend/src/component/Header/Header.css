@@ -1,0 +1,191 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+    color: #fff;
+    position: sticky; /* Make the header sticky
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; 
+}
+
+.logo1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.logo1 svg {
+    height: 60px; /* Set a fixed height for the logo */
+    width: auto;
+}
+
+.NavIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+li {
+    margin: 0 15px; /* Adjusted margin */
+    font-size: 18px; /* Adjusted font size */
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px; /* Adjusted font size */
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff; /* Add hover effect */
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px #4CAF50;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Ensure button looks like a link if using <a> */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Hamburger Menu Styles */
+.menu-button {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+/* Link Hover Animation */
+a {
+    text-decoration: none;
+    font-size: 18px; /* Adjusted font size */
+    color: #fff;
+    position: relative; /* Required for the pseudo-element */
+    transition: color 0.3s ease;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background: #4CAF50; /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+a:hover {
+    color: #fff; /* Add hover effect */
+}
+
+a:hover::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to the left */
+}
+
+/* Scale Animation */
+a:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        width: 100%;
+    }
+
+    .NavIcon {
+        position: absolute;
+        top: 80px; /* Below the header */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0; /* Hidden by default */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+    
+    .NavIcon.open {
+        max-height: 500px; /* Adjust as needed */
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 15px 0;
+    }
+
+    .menu-button {
+        display: block; /* Show hamburger menu */
+    }
+
+    .btn {
+        margin-top: 10px;
+    }
+}
+
+/* Additional adjustments for small screens */
+@media (max-width: 544px) {
+    .header {
+        padding: 0 10px; /* Reduce padding for small screens */
+        justify-content: space-between;
+    }
+
+    .logo1 svg {
+        height: 50px; /* Adjust logo size */
+    }
+
+    .NavIcon {
+        top: 60px; /* Adjust positioning if needed */
+    }
+
+    a {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .menu-button {
+        font-size: 28px; /* Larger hamburger icon */
+        padding: 5px;
+    }
+}

@@ -1,0 +1,53 @@
+/* Paragraph Styling */
+#paragraph {
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+}
+
+/* Footer Styling */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #paragraph {
+        font-size: 18px; /* Slightly reduce font size */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .footer {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        padding: 10px 20px; /* Reduce padding */
+    }
+
+    .footer-icon {
+        margin-top: 10px; /* Add spacing between elements */
+    }
+}
+
+@media (max-width: 544px) {
+    #paragraph {
+        font-size: 16px; /* Further reduce font size for smaller screens */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .footer {
+        padding: 10px 15px; /* Adjust footer padding */
+    }
+
+    .footer-icon {
+        margin-top: 15px; /* Add more space between stacked footer items */
+    }
+}

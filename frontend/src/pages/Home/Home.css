@@ -1,0 +1,209 @@
+/* Home.css */
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+/* AnimatedSection.css */
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home, .homea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto; /* Changed from 100vh to auto to allow content to expand */
+  padding: 20px 0;
+  opacity: 0;
+  transform: translateX(-100%); /* Initially off-screen to the left */
+  animation: slideIn 1s ease forwards; /* Slide in from left on page load */
+}
+
+@keyframes slideIn {
+  to {
+      opacity: 1;
+      transform: translateX(0); /* Slide to its normal position */
+  }
+}
+
+.box-1, .box-1a {
+  width: 50%;
+  padding: 40px 80px;
+}
+
+.img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img img {
+  width: 90%;
+  height: 90%;
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.Heading {
+  font-size: 60px;
+  color: aliceblue;
+}
+
+.span-heading {
+  color: red;
+}
+
+.button {
+  margin-top: 40px;
+}
+
+.button .btn {
+  color: aliceblue;
+}
+
+.paragraph {
+  font-size: 22px;
+  color: white;
+  padding: 22px 60px;
+  text-align: justify;
+}
+
+/* Animation Classes for CSSTransition */
+.fade-enter {
+opacity: 0;
+transform: translateY(-20px);
+}
+
+.fade-enter-active {
+opacity: 1;
+transform: translateY(0);
+transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+.fade-exit {
+opacity: 1;
+transform: translateY(0);
+}
+
+.fade-exit-active {
+opacity: 0;
+transform: translateY(-20px);
+transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+.box-1, .box-1a, .img, #img {
+  width: 80%;
+  padding: 20px 40px;
+}
+
+.Heading {
+  font-size: 40px;
+}
+
+.paragraph {
+  font-size: 18px;
+  padding: 20px;
+}
+}
+
+@media (max-width: 768px) {
+.box-1, .box-1a, .img, #img {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+}
+
+.Heading {
+  font-size: 35px;
+}
+
+.paragraph {
+  font-size: 16px;
+  padding: 15px;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 10px;
+}
+}
+
+@media (max-width: 480px) {
+.home, .homea {
+  flex-direction: column;
+  height: auto;
+}
+
+.box-1, .box-1a, .img, #img {
+  width: 100%;
+  padding: 10px;
+}
+
+#Heading {
+  font-size: 20px;
+}
+
+.paragraph {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.btn {
+  font-size: 12px;
+  padding: 8px;
+}
+}

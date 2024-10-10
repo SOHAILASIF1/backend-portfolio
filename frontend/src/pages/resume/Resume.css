@@ -1,0 +1,33 @@
+.resume {
+    display: flex;
+    flex-direction: column; /* Keeps content stacked vertically */
+    width: 100%;
+    height: 100vh;
+    padding-left: 40px;
+    box-sizing: border-box;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Initially off-screen to the left */
+    animation: slideIn 1s ease forwards; /* Slide in from left on page load */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Slide to its normal position */
+    }
+}
+
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #4CAF50;
+}
+
+.heading-comp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
