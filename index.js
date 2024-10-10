@@ -28,10 +28,10 @@ app.use('/api/contact', contactRoute);
 // Serve static files from the "dist" folder
 console.log(path.resolve(__dirname, "../frontend/dist"));  // This should log the correct path
 
-app.use(Express.static(path.resolve(__dirname, "./frontend/dist")));
+app.use(Express.static(path.resolve(__dirname, "frontend/dist")));
 
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./frontend/dist", "index.html"));
+    res.sendFile(path.resolve(__dirname, "frontend/dist", "index.html"));
 });
 
 
