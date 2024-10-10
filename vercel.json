@@ -1,31 +1,12 @@
 {
-
     "builds": [
       {
-        "src": "index.js",
+        "src": "backend/index.js",
         "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/getData",
-        "dest": "/index.js"
       },
       {
-        "src": "/api/addProject",
-        "dest": "/index.js"
-      },
-      {
-        "src": "/api/deletePost/(.*)",
-        "dest": "/index.js"
-      },
-      {
-        "src": "/api/contact/send",
-        "dest": "/index.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
+        "src": "backend/frontend/dist/**/*",
+        "use": "@vercel/static"
       }
     ]
   }
