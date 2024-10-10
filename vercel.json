@@ -1,14 +1,4 @@
 {
-    "builds": [
-      {
-        "src": "backend/index.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "backend/frontend/dist/**/*",
-        "use": "@vercel/static"
-      }
-    ],
     "routes": [
       {
         "src": "/api/(.*)",
@@ -16,7 +6,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "backend/frontend/dist/index.html"
+        "dest": "backend/frontend/dist/$1"  
       }
     ]
   }
